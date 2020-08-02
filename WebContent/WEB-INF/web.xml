@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>EasyMall</display-name>
+ 
+ 
+  <!-- 配置HttpSessionListener监听器 -->
+	<listener>
+		<listener-class>com.easymall.listener.MyHttpSessionListener</listener-class>
+	</listener>
+	
+	<!-- 配置ServletContextListener监听器 -->
+ 	<listener>
+ 		<listener-class>com.easymall.listener.MyServletContextListener</listener-class>
+	</listener>
+ 
+  <context-param>
+  	<param-name>encode</param-name>
+  	<param-value>utf-8</param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>RegistServlet</servlet-name>
+    <servlet-class>com.easymall.web.RegistServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.easymall.web.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ValiImageServlet</servlet-name>
+    <servlet-class>com.easymall.web.ValiImageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ProdImgServlet</servlet-name>
+    <servlet-class>com.easymall.web.ProdImgServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ProdListServlet</servlet-name>
+    <servlet-class>com.easymall.web.ProdListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ProdInfoServlet</servlet-name>
+    <servlet-class>com.easymall.web.ProdInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CartAddServlet</servlet-name>
+    <servlet-class>com.easymall.web.CartAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AjaxUpdateBuyNumServlet</servlet-name>
+    <servlet-class>com.easymall.web.AjaxUpdateBuyNumServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OrderAddServlet</servlet-name>
+    <servlet-class>com.easymall.web.OrderAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>OrderListServlet</servlet-name>
+    <servlet-class>com.easymall.web.OrderListServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>RegistServlet</servlet-name>
+    <url-pattern>/servlet/RegistServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/servlet/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ValiImageServlet</servlet-name>
+    <url-pattern>/servlet/ValiImageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProdImgServlet</servlet-name>
+    <url-pattern>/servlet/ProdImgServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProdListServlet</servlet-name>
+    <url-pattern>/servlet/ProdListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProdInfoServlet</servlet-name>
+    <url-pattern>/servlet/ProdInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CartAddServlet</servlet-name>
+    <url-pattern>/servlet/CartAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AjaxUpdateBuyNumServlet</servlet-name>
+    <url-pattern>/servlet/AjaxUpdateBuyNumServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OrderAddServlet</servlet-name>
+    <url-pattern>/servlet/OrderAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OrderListServlet</servlet-name>
+    <url-pattern>/servlet/OrderListServlet</url-pattern>
+  </servlet-mapping>
+
+  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
